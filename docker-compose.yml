@@ -1,0 +1,12 @@
+version: '3'
+services:
+  elasticsearch:
+    image: "es-image:latest"
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    networks:
+      - elk
+networks:
+  elk:
+    driver: bridge
